@@ -57,7 +57,9 @@ def clasificar_sueldo(trabajador,trabajadores):
 
 
             
-        
+def mangosaur():
+    with open ('trabajadores.csv', 'w', newline="") as archivo:
+        archivo.write("Nombre | Sueldo | Descuento Salud | Descuento AFP | Sueldo Liquido")
     
 
 
@@ -70,7 +72,8 @@ while True:
         print ("----------MENU----------")
         print("1. Asignar sueldos aleatorios")
         print("2. Clasificar sueldos")
-        print("3. Salir del programa")
+        print ("3. guardar csv")
+        print("4. Salir del programa")
         opcMen=int(input("->"))
     except ValueError:
         print("valor ingresado en el menu es incorrecto. reintenta")
@@ -88,6 +91,11 @@ while True:
             case 2:
                 clasificar_sueldo(trabajador,trabajadores)
             case 3:
+                mangosaur()
+                print ("guardado")
+                print ("")
+                
+            case 4:
                 print ("gracias por usar el programa")
                 break
                 
